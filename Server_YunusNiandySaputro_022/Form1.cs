@@ -34,8 +34,6 @@ namespace Server_YunusNiandySaputro_022
                 label3.Text = "Klik OFF untuk menonaktifkan server";
                 button1.Enabled = false;
                 button2.Enabled = true;
-                Console.WriteLine("Server is Ready!!!");
-                Console.ReadLine();
             }
             catch (Exception ex)
             {
@@ -57,8 +55,6 @@ namespace Server_YunusNiandySaputro_022
                 label3.Text = "Klik ON untuk menghidupkan server";
                 button2.Enabled = false;
                 button1.Enabled = true;
-                Console.WriteLine("Server is OFF!!!");
-                Console.ReadLine();
             }
             catch (Exception ex)
             {
