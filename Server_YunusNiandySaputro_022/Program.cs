@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ServiceMtk_P1_20180140022;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel;
@@ -18,6 +19,22 @@ namespace Server_YunusNiandySaputro_022
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+
+            ServiceHost hostObj = null;
+            try
+            {
+                hostObj = new ServiceHost(typeof(Matematika));
+                hostObj.Open();
+                Console.WriteLine("Server is Ready!!!");
+                Console.ReadLine();
+                hostObj.Close();
+            }
+            catch (Exception ex)
+            {
+                hostObj = null;
+                Console.WriteLine(ex.Message);
+                Console.ReadLine();
+            }
         }
     }
 }
