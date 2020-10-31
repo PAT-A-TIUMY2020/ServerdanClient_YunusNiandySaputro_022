@@ -22,9 +22,18 @@ namespace Client_YunusNiandySaputro_022
         {
             try
             {
+                int val1 = 0;
+                int val2 = 0;
                 ServiceReference1.MatematikaClient obj = new ServiceReference1.MatematikaClient();
-                int val1 = Int32.Parse(textBox1.Text);
-                int val2 = Int32.Parse(textBox2.Text);
+                try
+                {
+                    val1 = Int32.Parse(textBox1.Text);
+                    val2 = Int32.Parse(textBox2.Text);
+                }
+                catch
+                {
+                    MessageBox.Show("Number only", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
 
                 label7.Text = obj.Tambah(val1, val2).ToString();
                 label8.Text = obj.Kurang(val1, val2).ToString();
