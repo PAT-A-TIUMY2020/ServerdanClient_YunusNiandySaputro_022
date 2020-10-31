@@ -34,7 +34,7 @@ namespace Client_YunusNiandySaputro_022
             }
             catch
             {
-
+                MessageBox.Show("Can't connect to server", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
     }
