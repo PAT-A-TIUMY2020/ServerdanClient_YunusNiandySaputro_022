@@ -16,6 +16,8 @@ namespace Server_YunusNiandySaputro_022
 {
     public partial class Form1 : Form
     {
+        ServiceHost hostObj = null;
+
         public Form1()
         {
             InitializeComponent();
@@ -23,7 +25,7 @@ namespace Server_YunusNiandySaputro_022
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ServiceHost hostObj = null;
+            
             try
             {
                 hostObj = new ServiceHost(typeof(Matematika));
@@ -47,18 +49,16 @@ namespace Server_YunusNiandySaputro_022
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ServiceHost hostObj = null;
+            
             try
             {
-                hostObj = new ServiceHost(typeof(Matematika));
-                hostObj.Close();
+                hostObj.Abort();
                 label2.Text = "Server OFF";
                 label3.Text = "Klik ON untuk menghidupkan server";
                 button2.Enabled = false;
                 button1.Enabled = true;
                 Console.WriteLine("Server is OFF!!!");
                 Console.ReadLine();
-                hostObj.Close();
             }
             catch (Exception ex)
             {
