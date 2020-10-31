@@ -13,10 +13,6 @@ namespace Client_YunusNiandySaputro_022
     public partial class Form1 : Form
     {
 
-        ServiceReference1.MatematikaClient obj = new ServiceReference1.MatematikaClient();
-        ServiceReference1.Koordinat a = new ServiceReference1.Koordinat();
-        ServiceReference1.Koordinat b = new ServiceReference1.Koordinat();
-
         public Form1()
         {
             InitializeComponent();
@@ -27,9 +23,6 @@ namespace Client_YunusNiandySaputro_022
             try
             {
                 ServiceReference1.MatematikaClient obj = new ServiceReference1.MatematikaClient();
-                ServiceReference1.Koordinat a = new ServiceReference1.Koordinat();
-                ServiceReference1.Koordinat b = new ServiceReference1.Koordinat();
-
                 int val1 = Int32.Parse(textBox1.Text);
                 int val2 = Int32.Parse(textBox2.Text);
 

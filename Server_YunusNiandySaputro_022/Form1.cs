@@ -39,7 +39,6 @@ namespace Server_YunusNiandySaputro_022
             {
                 button2.Enabled = false;
                 button1.Enabled = true;
-                hostObj = null;
                 Console.WriteLine(ex.Message);
                 Console.ReadLine();
             }
@@ -60,7 +59,6 @@ namespace Server_YunusNiandySaputro_022
             {
                 button1.Enabled = false;
                 button2.Enabled = true;
-                hostObj = null;
                 Console.WriteLine(ex.Message);
                 Console.ReadLine();
             }
