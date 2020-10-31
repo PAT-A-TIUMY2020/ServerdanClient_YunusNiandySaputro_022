@@ -34,10 +34,11 @@ namespace Server_YunusNiandySaputro_022
                 button2.Enabled = true;
                 Console.WriteLine("Server is Ready!!!");
                 Console.ReadLine();
-                hostObj.Close();
             }
             catch (Exception ex)
             {
+                button2.Enabled = false;
+                button1.Enabled = true;
                 hostObj = null;
                 Console.WriteLine(ex.Message);
                 Console.ReadLine();
@@ -61,6 +62,8 @@ namespace Server_YunusNiandySaputro_022
             }
             catch (Exception ex)
             {
+                button1.Enabled = false;
+                button2.Enabled = true;
                 hostObj = null;
                 Console.WriteLine(ex.Message);
                 Console.ReadLine();
